@@ -7,10 +7,10 @@
         <helpers:IconConvertor x:Key="IconConvertor"></helpers:IconConvertor>
     </Window.Resources>
     <Grid Height="314">
-      
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
@@ -32,6 +32,13 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock x:Name="txtWorkedHours" Text="{Binding WorkedHours}"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="ConvertorText">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox x:Name="txtConvertor" Text="Sample text" ToolTip="{Binding ElementName=txtConvertor, Path=Text, Converter={StaticResource IconConvertor}}"></TextBox>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

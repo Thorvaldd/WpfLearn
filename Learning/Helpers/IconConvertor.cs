@@ -10,12 +10,20 @@ namespace Learning.Helpers
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var model = value as Customer;
-            var tmp = DateTime.Now;
-            var span = model.WorkedHours.Subtract(tmp);
-            var hours = span.TotalHours;
+            if (value is Customer)
+            {
+                var model = value as Customer;
+                var tmp = DateTime.Now;
+                var span = model.WorkedHours.Subtract(tmp);
+                var hours = span.TotalHours;
 
-            return hours > 100 ? Visibility.Visible : Visibility.Hidden;
+                return hours > 100 ? Visibility.Visible : Visibility.Hidden;
+            }
+            if(value is string)
+            {
+                return "String Value passed to IConvertor";
+            }
+            return value;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
