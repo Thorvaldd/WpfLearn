@@ -54,6 +54,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BaseBind\BindableBase.cs" />
+    <Compile Include="Helpers\IconConvertor.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />
     <Page Include="MainWindow.xaml">
@@ -95,6 +96,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\1440702426_keditbookmarks.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

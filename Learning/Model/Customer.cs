@@ -1,5 +1,7 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Media;
 using Learning.BaseBind;
 
 namespace Learning.Model
@@ -9,8 +11,8 @@ namespace Learning.Model
         private int _id;
         private string _firstName;
         private string _lastName;
-
-
+        private DateTime _workedHours;
+      
         public int Id
         {
             get { return _id; }
@@ -29,5 +31,10 @@ namespace Learning.Model
             set { SetProperty(ref _lastName, value); }
         }
 
+        public DateTime WorkedHours
+        {
+            get { return _workedHours; }
+            set { SetProperty(ref _workedHours, value); }
+        }
     }
 }
