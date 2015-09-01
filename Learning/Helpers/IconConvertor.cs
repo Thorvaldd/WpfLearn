@@ -10,11 +10,11 @@ namespace Learning.Helpers
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value is Customer)
+            if (value is DateTime)
             {
-                var model = value as Customer;
+                var timveValue = (DateTime) value;
                 var tmp = DateTime.Now;
-                var span = model.WorkedHours.Subtract(tmp);
+                var span = timveValue.Subtract(tmp);
                 var hours = span.TotalHours;
 
                 return hours > 100 ? Visibility.Visible : Visibility.Hidden;

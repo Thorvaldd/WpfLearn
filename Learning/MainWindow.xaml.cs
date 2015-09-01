@@ -11,7 +11,7 @@ namespace Learning
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new CustomerViewModel();
+            DataContext = new MediaViewModel();
         }
     }
 }

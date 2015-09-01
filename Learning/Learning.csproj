@@ -54,9 +54,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BaseBind\BindableBase.cs" />
+    <Compile Include="Helpers\Enums.cs" />
     <Compile Include="Helpers\IconConvertor.cs" />
     <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Media.cs" />
+    <Compile Include="TemplateSelector\DatatemplateSwitcher.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />
+    <Compile Include="ViewModel\MediaViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -98,7 +102,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\1440702426_keditbookmarks.ico" />
+    <Resource Include="Resources\star.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\linux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\stackerror-firstStep.swf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
